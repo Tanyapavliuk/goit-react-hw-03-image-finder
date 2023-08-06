@@ -3,6 +3,7 @@ import ImageGalleryItem from './ImageGalleryItem'; //окремий елемен
 import { Loader, Heart } from 'components/Loader/Loader'; //лоадери
 import { NotFaundPhoto } from 'components/SmalComponent/SmalComponent'; //якщо пустий масив
 import Button from 'components/Button/Button';
+import { Error } from 'components/SmalComponent/Error';
 
 import { List, LoaderWrapper, TextMassage } from './ItemGallary.styled';
 
@@ -118,9 +119,7 @@ class ImageGallery extends Component {
 
     //відповідь провальна
     if (status === 'rejected') {
-      return (
-        <TextMassage>На жаль, сталась помилка. Спробуйте ще раз.</TextMassage>
-      );
+      return <Error />;
     }
   }
 }
