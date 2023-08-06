@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { WrapButton, ButtonMore } from './Button.styled';
 
 const Button = ({ onclick }) => {
@@ -11,3 +12,6 @@ const Button = ({ onclick }) => {
 };
 
 export default Button;
+Button.propTypes = {
+  onClick: PropTypes.func,
+};

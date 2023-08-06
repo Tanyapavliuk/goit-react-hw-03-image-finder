@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import ImageGalleryItem from './ImageGalleryItem'; //окремий елемент списку
 import { Loader, Heart } from 'components/Loader/Loader'; //лоадери
@@ -124,3 +125,7 @@ class ImageGallery extends Component {
   }
 }
 export default ImageGallery;
+
+ImageGallery.propTypes = {
+  searchName: PropTypes.string.isRequired,
+};
