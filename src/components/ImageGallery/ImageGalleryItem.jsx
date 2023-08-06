@@ -23,9 +23,6 @@ class ImageGalleryItem extends Component {
       this.setState({ isModalOpen: false });
     }
   };
-  onClickBackdrop = e => {
-    console.log('ok');
-  };
 
   render() {
     const { largeImageURL, webformatURL, tags } = this.props.item;
@@ -40,7 +37,7 @@ class ImageGalleryItem extends Component {
           onClick={this.handleClickOnImg}
         />
         {this.state.isModalOpen && (
-          <Modal>
+          <Modal funcClick={this.handleClickOnImg}>
             <img src={webformatURL} width="100%" height="100%" alt={tags} />
           </Modal>
         )}
