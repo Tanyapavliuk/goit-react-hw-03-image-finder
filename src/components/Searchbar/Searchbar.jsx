@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { BsSearch } from 'react-icons/bs';
+import Clock from 'components/Clock/Clock';
 
 import { Header, Form, Button, Input } from './Searchbar.styled';
 
@@ -18,6 +19,7 @@ class Searchbar extends Component {
   render() {
     return (
       <Header>
+        <Clock />
         <Form onSubmit={this.handleSubmitInput}>
           <Input
             type="text"
